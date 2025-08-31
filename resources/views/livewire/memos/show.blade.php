@@ -13,6 +13,10 @@ state(['memo' => fn(Memo $memo) => $memo]);
 ?>
 
 <div>
+{{-- route('ルート名', [パラメータ1, パラメータ2, ...]) --}}
+    <a href="{{ route('memos.index') }}">
+        戻る</a>
+
     {{-- 取得したidのtitleカラムや、bodyカラムをいれる --}}
     {{-- laravelは{{}}の枠で有害コードを省いてくれる --}}
     {{-- e関数 無害にする --}}
