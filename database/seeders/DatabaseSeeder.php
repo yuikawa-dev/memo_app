@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // .envがlocalだったらMemoSeederクラスを呼ぶ(config内のapp.envではなかった)
+        // 本番環境(=productのこと。localじゃないときに)テストデータが呼ばれるのを防ぐ
+        if (config('app.env') === 'local') {
+            $this->call(MemoSeeder::class);
+        }
     }
 }
