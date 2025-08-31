@@ -1,7 +1,6 @@
 <?php
 
 use function Livewire\Volt\{state};
-// use Livewire\Volt\Volt;
 use App\Models\Memo;
 
 state(['title', 'body']);

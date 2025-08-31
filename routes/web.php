@@ -16,3 +16,6 @@ Volt::route('memos/create', 'memos.create')->name('memos.create');
 // 詳細ページ
 // nameで名前つける
 Volt::route('/memos/{memo}', 'memos.show')->name('memos.show');
+
+// 更新ページ
+Volt::route('/memos/{memo}/edit', 'memos.edit')->name('memos.edit');

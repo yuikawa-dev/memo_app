@@ -7,6 +7,8 @@ use App\Models\Memo;
 // state(['変数名' => fn() => 返り値]);
 state(['memos' => fn() => Memo::all()]);
 
+// 新規登録処理
+// 登録するボタンを押下したときに呼ばれる処理
 $create = function () {
     return redirect()->route('memos.create');
 };
