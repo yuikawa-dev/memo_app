@@ -7,6 +7,9 @@ use App\Models\Memo;
 // state(['変数名' => fn() => 返り値]);
 state(['memos' => fn() => Memo::all()]);
 
+$create = function () {
+    return redirect()->route('memos.create');
+};
 ?>
 
 <div>
@@ -24,4 +27,5 @@ state(['memos' => fn() => Memo::all()]);
             </li>
         @endforeach
     </ul>
+    <button wire:click="create">登録する</button>
 </div>
