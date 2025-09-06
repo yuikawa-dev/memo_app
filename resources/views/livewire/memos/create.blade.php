@@ -5,6 +5,7 @@ use App\Models\Memo;
 
 // 変数宣言
 state(['title', 'body']);
+// state(['title', 'body', 'priority']);
 
 // バリデーションルール作成
 // validate() は rules() とセットで動くように設計されているため、
@@ -24,6 +25,7 @@ $store = function () {
     Memo::create([
         'title' => $this->title,
         'body' => $this->body,
+        // 'priority' => $this->priority,
     ]);
 
     // 一覧ページにリダイレクト
@@ -56,6 +58,14 @@ $store = function () {
             <br>
             <textarea wire:model="body" id="body"></textarea>
         </p>
+        {{-- <p>
+            <select name="priority" wire:model="priority" id="priority">
+                <option value="1">低</option>
+                <option value="2">中</option>
+                <option value="3">高</option>
+            </select>
+        </p> --}}
+
         <button type="submit">登録</button>
 
     </form>

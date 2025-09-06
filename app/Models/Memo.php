@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Memo extends Model
 {
+    // protected $fillable = ['title', 'body', 'priority'];
     protected $fillable = ['title', 'body'];
 }

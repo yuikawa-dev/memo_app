@@ -37,6 +37,9 @@ $destroy = function () {
     {{-- 改行コード変換 --}}
     <h1>{{ $memo->title }}</h1>
     <p>{!! nl2br(e($memo->body)) !!}</p>
+    {{-- if文？ --}}
+    {{-- <p>優先度:{{ $memo->priority }}  --}}
+    </p>
 
     {{-- 編集用ページに遷移 --}}
     <button wire:click="edit">編集する</button>

@@ -7,7 +7,7 @@ use App\Models\Memo;
 // state内部の変数定義は$がつかない
 // 初期表示させたい部分も変数を作る
 // $ がついていないのは、これは「変数を使う」のではなく、「変数名（文字列）を宣言している」だけ
-state(['memo', 'title', 'body']);
+state(['memo', 'title', 'body', 'priority']);
 
 // バリデーション定義
 rules([
@@ -24,6 +24,8 @@ mount(function (Memo $memo) {
     $this->title = $memo->title;
     // Memoモデルのbody
     $this->body = $memo->body;
+    // Memoモデルのpriority
+    // $this->priority = $memo->priority;
 });
 
 // 更新処理
@@ -63,5 +65,13 @@ $update = function () {
             <br>
             <textarea wire:model="body" id="body"></textarea>
         </p>
+        {{-- <p>
+            <select name="priority" wire:model="priority" id="priority">
+                <option value="1">低</option>
+                <option value="2">中</option>
+                <option value="3">高</option>
+            </select>
+        </p> --}}
         <button type="submit">更新</button>
+    </form>
 </div>

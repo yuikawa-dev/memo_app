@@ -26,6 +26,14 @@ $create = function () {
                 {{-- 詳細のリンクがmemos.show --}}
                 <a href="{{ route('memos.show', $memo) }}">
                     {{ $memo->title }}</a>
+                {{-- ここまでやった20250831 --}}
+                {{-- <label for="">優先度：{{ $priority }}
+                    @if ($memo->priority == 1)
+                        {
+                        $priority => '高'
+                        }
+                    @endif
+                </label> --}}
             </li>
         @endforeach
     </ul>
